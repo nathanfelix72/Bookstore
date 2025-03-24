@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Book } from './types/Book';
+import { Book } from '../types/Book';
+import { useNavigate } from 'react-router-dom';
 
-function BookList() {
+function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   const [books, setBooks] = useState<Book[]>([]);
   const [pageSize, setPageSize] = useState<number>(10);
   const [pageNum, setPageNum] = useState<number>(1);
@@ -9,11 +10,16 @@ function BookList() {
   const [totalPages, setTotalPages] = useState<number>(0);
   const [sortBy, setSortBy] = useState<string>('title');
   const [sortOrder, setSortOrder] = useState<string>('asc');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBooks = async () => {
+      const categoryParams = selectedCategories
+        .map((cat) => `bookTypes=${encodeURIComponent(cat)}`)
+        .join('&');
+
       const response = await fetch(
-        `https://localhost:5000/book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sortBy=${sortBy}&sortOrder=${sortOrder}`
+        `https://localhost:5000/book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sortBy=${sortBy}&sortOrder=${sortOrder}${selectedCategories.length ? `&${categoryParams}` : ''}`
       );
       const data = await response.json();
 
@@ -23,14 +29,12 @@ function BookList() {
     };
 
     fetchBooks();
-  }, [pageSize, pageNum, totalItems, sortBy, sortOrder]);
+  }, [pageSize, pageNum, totalItems, sortBy, sortOrder, selectedCategories]);
 
   return (
     <>
-      <h1>Book Store</h1>
-      <br />
       {books.map((b) => (
-        <div id="projectCard" className="card" key={b.bookId}>
+        <div id="bookCard" className="card" key={b.bookId}>
           <h3 className="card-title">{b.title}</h3>
           <div className="card-body">
             <ul className="list-unstyled">
@@ -56,6 +60,15 @@ function BookList() {
                 <strong>Price:</strong> {b.price}
               </li>
             </ul>
+
+            <button
+              className="btn btn-success"
+              onClick={() =>
+                navigate(`/purchase/${b.title}/${b.bookId}/${b.price}`)
+              }
+            >
+              Purchase
+            </button>
           </div>
         </div>
       ))}

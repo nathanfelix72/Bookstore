@@ -44,7 +44,29 @@
               "type": "string",
               "default": "asc"
             }
+          },
+          {
+            "name": "bookTypes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Book/GetBookTypes": {
+      "get": {
+        "tags": [
+          "Book"
         ],
         "responses": {
           "200": {

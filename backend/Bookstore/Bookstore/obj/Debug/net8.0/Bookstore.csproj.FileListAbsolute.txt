@@ -135,3 +135,4 @@ C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.pdb
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.genruntimeconfig.cache
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\ref\Bookstore.dll
+C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.sourcelink.json
