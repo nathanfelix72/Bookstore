@@ -31,13 +31,17 @@ function PurchasePage() {
     <>
       <Welcome />
       <h2>
-        Purchase {title} for {price}?
+        Purchase {title} for ${price}?
       </h2>
       <div>
-        <button onClick={handleAddToCart}>Yes, add to cart</button>
+        <button className="btn btn-primary" onClick={handleAddToCart}>
+          Yes, add to cart
+        </button>
       </div>
 
-      <button onClick={() => navigate(-1)}>Go Back</button>
+      <button className="btn btn-danger" onClick={() => navigate(-1)}>
+        No, Go Back
+      </button>
     </>
   );
 }

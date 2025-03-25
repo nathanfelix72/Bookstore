@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { CartItem } from '../types/CartItem';
+import { ProgressBar } from 'react-bootstrap';
 
 function CartPage() {
   const navigate = useNavigate();
@@ -11,6 +12,11 @@ function CartPage() {
     addOneToCart,
     clearCart,
   } = useCart();
+
+  const free_shipping_threshold = 50;
+  const total = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
+  const progress = Math.min((total / free_shipping_threshold) * 100, 100);
+  const amountRemaining = free_shipping_threshold - total;
 
   return (
     <div>
@@ -96,7 +102,6 @@ function CartPage() {
         )}
       </div>
 
-      {/* Calculate total price */}
       <h3>
         Total: $
         {cart
@@ -104,9 +109,30 @@ function CartPage() {
           .toFixed(2)}
       </h3>
 
-      <button>Checkout</button>
-      <button onClick={clearCart}>Clear Cart</button>
-      <button onClick={() => navigate('/books')}>Continue Browsing</button>
+      {total > 0 && (
+        <div className="mt-3">
+          <h6>Free Shipping Progress</h6>
+          <ProgressBar
+            now={progress}
+            variant={progress === 100 ? 'success' : 'primary'}
+            animated
+            striped
+          />
+          <p className="mt-2">
+            {progress === 100
+              ? '✅ You unlocked free shipping!'
+              : `Spend $${amountRemaining.toFixed(2)} more for free shipping!`}
+          </p>
+        </div>
+      )}
+
+      <button className="btn btn-primary">Checkout</button>
+      <button className="btn btn-danger" onClick={clearCart}>
+        Clear Cart
+      </button>
+      <button className="btn btn-secondary" onClick={() => navigate('/books')}>
+        Continue Browsing
+      </button>
     </div>
   );
 }

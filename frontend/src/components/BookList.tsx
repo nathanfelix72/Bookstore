@@ -93,11 +93,16 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
 
       <br />
 
-      <button disabled={pageNum === 1} onClick={() => setPageNum(pageNum - 1)}>
+      <button
+        className="btn"
+        disabled={pageNum === 1}
+        onClick={() => setPageNum(pageNum - 1)}
+      >
         Previous
       </button>
       {[...Array(totalPages)].map((_, i) => (
         <button
+          className="btn"
           key={i + 1}
           onClick={() => setPageNum(i + 1)}
           disabled={pageNum === i + 1}
@@ -106,6 +111,7 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
         </button>
       ))}
       <button
+        className="btn"
         disabled={pageNum === totalPages}
         onClick={() => setPageNum(pageNum + 1)}
       >
