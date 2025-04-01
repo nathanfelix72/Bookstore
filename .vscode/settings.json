@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/0f461da1-c18d-4f32-94f3-b42c5f29d951/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/BookProject-Nathan-Backend",
+  "appService.deploySubpath": "backend\\Bookstore\\Bookstore\\publish"
+}

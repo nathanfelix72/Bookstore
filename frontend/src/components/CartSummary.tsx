@@ -12,13 +12,14 @@ const CartSummary = () => {
         position: 'fixed',
         top: '10px',
         right: '20px',
-        background: '#f8f9fa',
+        background: '#ffffff',
+        color: '#000000',
         padding: '10px 15px',
         borderRadius: '8px',
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
-        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
         fontSize: '16px',
       }}
       onClick={() => navigate('/cart')}
