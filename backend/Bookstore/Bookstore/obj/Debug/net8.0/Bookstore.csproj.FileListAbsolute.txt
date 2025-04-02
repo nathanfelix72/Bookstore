@@ -128,7 +128,6 @@ C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Bookstore.props
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Bookstore.props
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.csproj.Up2Date
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.dll
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\refint\Bookstore.dll
@@ -136,3 +135,4 @@ C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.genruntimeconfig.cache
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\ref\Bookstore.dll
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.sourcelink.json
+C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\bin\Debug\net8.0\Bookstore.sqlite

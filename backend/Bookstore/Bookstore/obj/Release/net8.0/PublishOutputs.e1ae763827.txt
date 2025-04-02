@@ -1,6 +1,7 @@
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\Bookstore.exe
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\appsettings.Development.json
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\appsettings.json
+C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\Bookstore.sqlite
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\Bookstore.dll
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\Bookstore.runtimeconfig.json
 C:\Users\natha\source\repos\Bookstore\backend\Bookstore\Bookstore\publish\Bookstore.pdb
